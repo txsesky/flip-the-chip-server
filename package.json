@@ -1,0 +1,41 @@
+{
+  "private": true,
+  "name": "flip-the-chip",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "build": "npm run clean && tsc && node node_modules/copyfiles/copyfiles package.json ./lib && node node_modules/copyfiles/copyfiles ./lib",
+    "clean": "node node_modules/rimraf/bin lib",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "schema-codegen": "schema-codegen src/rooms/schema/state --csharp --output ../Assets/Game/Scripts/Networking/States/"
+  },
+  "engines": {
+    "node": ">=14.x"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@colyseus/monitor": "^0.14.22",
+    "colyseus": "^0.14.22",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "nodemon": "^2.0.15",
+    "npm": "^8.6.0",
+    "serve-index": "^1.8.0",
+    "superagent": "^3.8.1",
+    "@colyseus/social": "^0.10.9",
+    "express-jwt": "^5.3.1",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "browserify": "^14.4.0",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.4.5",
+    "@colyseus/loadtest": "^0.14.0",
+    "@types/cors": "^2.8.6",
+    "@types/express": "^4.17.1",
+    "ts-node-dev": "^1.0.0-pre.63"
+  }
+}
