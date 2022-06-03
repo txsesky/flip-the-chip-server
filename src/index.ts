@@ -4,7 +4,7 @@ import cors from "cors";
 import { Server } from 'colyseus';
 import { monitor } from '@colyseus/monitor';
 import { WebSocketTransport } from "@colyseus/ws-transport";
-import { GameRoom } from './src/rooms/game-room';
+import { GameRoom } from './rooms/game-room';
 
 const port = Number(process.env.PORT || 8080);
 const app = express();
