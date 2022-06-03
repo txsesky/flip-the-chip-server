@@ -7,7 +7,9 @@
   "scripts": {
     "start": "ts-node-dev --respawn --transpile-only src/index.ts",
     "build": "npm run clean && tsc && node node_modules/copyfiles/copyfiles package.json ./lib && node node_modules/copyfiles/copyfiles ./lib",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "node node_modules/rimraf/bin lib",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "schema-codegen": "schema-codegen src/rooms/schema/state --csharp --output ../Assets/Game/Scripts/Networking/States/"
   },
   "engines": {
     "node": ">=14.x"
@@ -25,7 +27,8 @@
     "superagent": "^3.8.1",
     "@colyseus/social": "^0.10.9",
     "express-jwt": "^5.3.1",
-    "winston": "^3.3.3"
+    "winston": "^3.3.3",
+    "rimraf": "^2.7.1"
   },
   "devDependencies": {
     "browserify": "^14.4.0",
