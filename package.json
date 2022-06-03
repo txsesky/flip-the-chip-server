@@ -28,7 +28,7 @@
     "@colyseus/social": "^0.10.9",
     "express-jwt": "^5.3.1",
     "winston": "^3.3.3",
-    "rimraf": "^2.7.1"
+    "@colyseus/arena": "^0.14.24"
   },
   "devDependencies": {
     "browserify": "^14.4.0",
@@ -37,6 +37,10 @@
     "@colyseus/loadtest": "^0.14.0",
     "@types/cors": "^2.8.6",
     "@types/express": "^4.17.1",
-    "ts-node-dev": "^1.0.0-pre.63"
+    "ts-node-dev": "^1.0.0-pre.63",
+    "@colyseus/uwebsockets-transport": "^0.14.24",
+    "copyfiles": "^2.4.1",
+    "rimraf": "^2.7.1",
+    "uwebsockets-express": "^1.1.14"
   }
 }
